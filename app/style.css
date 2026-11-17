@@ -1,0 +1,309 @@
+/* Boardwalk: one small stylesheet, no framework, readable on a phone. */
+body {
+  margin: 0 auto;
+  max-width: 980px;
+  padding: 0 16px 48px;
+  font: 16px/1.55 system-ui, -apple-system, "Segoe UI", sans-serif;
+  color: #191919;
+  background: #fff;
+}
+
+header {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  flex-wrap: wrap;
+  padding: 14px 0;
+  border-bottom: 2px solid #191919;
+}
+
+.brand {
+  font-size: 1.35em;
+  font-weight: 800;
+  color: #191919;
+  text-decoration: none;
+}
+
+.tag {
+  color: #555;
+  font-size: 0.9em;
+}
+
+header nav {
+  margin-left: auto;
+}
+
+a {
+  color: #0b5cad;
+}
+
+a:visited {
+  color: #6b3fa0;
+}
+
+h1 {
+  font-size: 1.5em;
+  margin: 0.7em 0 0.4em;
+}
+
+h2 {
+  font-size: 1.2em;
+  margin: 1.4em 0 0.4em;
+}
+
+.controls {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 12px 0;
+}
+
+.controls input[type="search"],
+.controls select {
+  font: inherit;
+  padding: 6px 8px;
+  border: 1px solid #999;
+  border-radius: 6px;
+  background: #fff;
+}
+
+.controls input[type="search"] {
+  flex: 1 1 220px;
+}
+
+.controls label {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.count {
+  color: #555;
+  font-size: 0.9em;
+}
+
+.board {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.board li {
+  padding: 12px 0;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.board h2 {
+  margin: 0 0 2px;
+  font-size: 1.1em;
+}
+
+.board .meta {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  color: #444;
+  font-size: 0.92em;
+}
+
+.pot {
+  font-weight: 700;
+  color: #191919;
+}
+
+.badge {
+  display: inline-block;
+  padding: 1px 8px;
+  border-radius: 999px;
+  font-size: 0.82em;
+  font-weight: 600;
+  background: #e6f4ea;
+  color: #137333;
+}
+
+.badge.closed {
+  background: #fce8e6;
+  color: #a50e0e;
+}
+
+.badge.fee {
+  background: #fef7e0;
+  color: #7a4a00;
+}
+
+dl {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 4px 16px;
+  margin: 12px 0;
+}
+
+dt {
+  font-weight: 600;
+}
+
+dd {
+  margin: 0;
+}
+
+.scroll {
+  overflow-x: auto;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 0.95em;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 6px 10px 6px 0;
+  border-bottom: 1px solid #eee;
+  vertical-align: top;
+}
+
+th.num,
+td.num {
+  text-align: right;
+}
+
+td .sub {
+  display: block;
+  color: #555;
+  font-size: 0.85em;
+}
+
+.avatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  vertical-align: middle;
+  margin-right: 8px;
+}
+
+.profile-head {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  margin: 16px 0 8px;
+}
+
+.profile-head img {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+  gap: 10px;
+  margin: 16px 0;
+}
+
+.stats div {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 8px 10px;
+}
+
+.stats b {
+  display: block;
+  font-size: 1.25em;
+}
+
+.stats span {
+  color: #555;
+  font-size: 0.85em;
+}
+
+.description {
+  white-space: pre-wrap;
+}
+
+details {
+  margin: 12px 0;
+}
+
+details summary {
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.rules {
+  white-space: pre-wrap;
+  font-size: 0.9em;
+  background: #f7f7f7;
+  padding: 12px;
+  border-radius: 8px;
+  max-height: 420px;
+  overflow: auto;
+}
+
+.lookup {
+  display: flex;
+  gap: 8px;
+  margin: 20px 0 0;
+  padding-top: 16px;
+  border-top: 1px solid #e5e5e5;
+}
+
+.lookup input {
+  font: inherit;
+  padding: 6px 8px;
+  border: 1px solid #999;
+  border-radius: 6px;
+  flex: 1 1 200px;
+}
+
+.lookup button,
+.more {
+  font: inherit;
+  padding: 6px 14px;
+  border: 1px solid #191919;
+  border-radius: 6px;
+  background: #191919;
+  color: #fff;
+  cursor: pointer;
+}
+
+.more {
+  margin-top: 12px;
+}
+
+.loading,
+.error {
+  color: #555;
+  padding: 24px 0;
+}
+
+footer {
+  margin-top: 32px;
+  padding-top: 12px;
+  border-top: 1px solid #e5e5e5;
+  color: #555;
+  font-size: 0.88em;
+}
+
+@media (max-width: 640px) {
+  body {
+    font-size: 15px;
+  }
+
+  .board .meta {
+    gap: 8px;
+  }
+
+  dl {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  dd {
+    margin-bottom: 8px;
+  }
+}
